@@ -1,0 +1,700 @@
+body {
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-weight: 400;
+    font-size: 3vmin;
+    overflow: auto;  
+}
+  
+.navigation {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 8vmin;
+
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(118, 204, 222);
+    margin: 2vmin;
+    font-size: 13px;
+}
+
+.navigation a:hover {
+    color: #ffa75a;
+    font-size: 15px;
+}
+
+.container {
+    position: relative;
+    width: 50vw;
+    height: auto;
+    margin-left: 25vw;
+    z-index:2;
+    max-height: 100%;
+}
+
+.profile img{
+    position: relative;
+    width: 50vw;
+    height: auto;
+    margin-bottom: 2vmin;
+}
+
+.GradientCV{
+    display: block;
+    position: sticky;
+    top: 40vh;
+    right:0vw;
+    width: 100%;
+    height: 2vh;
+    filter: blur(15px);
+    background: linear-gradient(to left,rgba(255, 255, 255, 0)0%, rgb(255, 159, 118)15%, rgb(250, 255, 118)40%,rgb(32, 192, 255)85%,rgba(255, 255, 255, 0)100%);
+    z-index:auto;
+    transform: scale(0.7,2);  
+}
+
+.GradientC{
+    display: block;
+    position: sticky;
+    top: 65vh;
+    right:0vw;
+    width: 100%;
+    height: 6vh;
+    filter: blur(30px);
+    background: linear-gradient(to left, rgb(255, 255, 255,0)0%, rgb(255, 255, 255,0)25%,rgb(255, 255, 255,0)50%,rgba(255, 255, 255, 0)100%);
+    z-index:auto;
+    transform: scale(0.7,2);  
+  
+}
+.GradientContact{
+    display: block;
+    position: relative;
+    left:20vw;
+    bottom:30vh;
+    width: 100%;
+    height: 6vh;
+    filter: blur(40px);
+    background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+    z-index:auto;
+    transform: scale(1,2);  
+  
+}
+
+.GradientContact2{
+    display: block;
+    position: relative;
+    left:50vw;
+    bottom:20vh;
+    width: 30vw;
+    height: 3vh;
+    filter: blur(20px);
+    background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+    z-index:auto;
+    transform: scale(1,2.5);  
+  
+}
+.email {  
+    margin-top: 10vmin;
+    text-align: center;
+   
+}
+
+.email a{
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+    color: #000000;
+}
+
+.email h3{
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-decoration-style: wavy; 
+}
+
+.email img { 
+    width: 15px;
+    height: auto;
+}
+.email h3:hover{
+    color: #ffa75a;
+    font-size: 15px;
+}
+.email img:hover{
+    filter: sepia(100%);
+    width: 20px;
+    height: auto;
+
+}
+
+.partner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10vmin;
+    padding-bottom: 25vmin;
+    color: #000000;
+   
+  
+}
+
+.partner h3{
+    margin-top: 5vmin; 
+    white-space: nowrap;
+    font-size: 13px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    color: #000000;
+}
+
+.partner a{
+    margin-left: 10px;
+    
+
+}
+.partner a h3{
+    font-size: 13px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    color: #000000;
+    text-decoration-line: underline;
+    text-decoration-style: wavy; 
+    text-decoration-color: #000000 ;
+
+}
+.partner a h3:hover{
+    color: #bdb0d0;
+    text-decoration-color: #bdb0d0 ;
+    font-size: 15px;
+
+}
+
+h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    
+    
+}
+
+h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-weight: 300;
+    font-size: 14px;
+    color: #000000;
+}
+
+h3 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+    text-align: center;
+}
+
+h4 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
+
+h5 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-weight: 300;
+    font-size: 10px;
+    color: #000000;
+}
+
+p{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+   
+
+}
+.w{
+    position: relative;
+    text-align: center;
+    padding-top: 5vmin;
+    text-align: center;
+}
+
+.w1{
+    position: relative;
+    text-align: center;
+    padding-top: 5vmin;
+    text-align: center;
+}
+
+.w2{
+    display: none;
+    
+}
+.w2 h1{
+    
+    
+}
+
+
+.GradientWorks{
+
+    display: block;
+    position: sticky;
+    bottom: 0vh;
+    width: 100%;
+    height: 15vh;
+
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
+    filter: blur(10px);
+    transform: scale(1.2,3);
+    
+}
+.pad{
+    padding:10vmin;
+}
+.image {
+    display: block;
+    cursor: pointer;
+    margin-top: 8vmin;
+    margin-bottom: 8vmin;
+    
+    
+}
+
+.image img {
+    position: relative;
+    display: block;
+    width: 50vw;
+    height: auto;
+    object-fit: cover;
+    right:0vw; 
+}
+
+.overlay {
+    position: sticky;
+    margin-left: 52vw;
+    bottom: 50vh;
+    width: auto;
+    height: auto;
+    max-width: 12px;
+    max-height: 8vmin;
+    overflow-wrap: normal;
+    text-align: justify;
+
+
+    opacity: 0;
+    transition: .5s ease;
+ 
+  }
+
+.image:hover .overlay {
+    opacity: 1;
+}
+
+.image img:hover {
+    width: 51vw;
+    height: auto;
+    right:0.5vw;
+    top:0.7vh;
+}
+
+
+.txt {
+
+    color: rgb(79, 79, 79);
+    font-size: 12px; 
+  
+  }
+  
+.work {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    
+}
+.content{
+    display: block;
+    position: relative;
+    padding-top: 5vh;
+}
+#work-image {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.work-images {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+.work-images img{
+    padding-bottom: 10vmin;
+}
+#media {
+    display: block;
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: auto;
+    height: auto;
+}
+
+.word{
+    display: block;
+    position: relative;
+
+  
+    text-align: center;
+    
+
+
+}
+#title {
+ 
+}
+
+#description {
+    display: block;
+    position: relative;
+    padding-bottom: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: start;
+    overflow-wrap: break-word;
+    text-align: justify-all;
+    
+
+ 
+}
+
+#text {
+    padding-bottom: 10vmin;
+ 
+}
+
+.close {
+    display: block;
+    position: relative;
+    padding-top: 1.5vh;
+    left: 95vw;
+    width:100vw;
+    color: #7d7d7d;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 23px;
+    font-weight: light;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.close:hover {
+    color: #000000;
+    font-size: 25px;
+}
+
+footer{
+    background-color: rgb(255, 255, 255);
+    text-align: center; 
+    padding: 5vmin;
+
+}
+footer h3{
+
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: #7e7e7e;
+    font-size: 10px;
+    font-weight: 400;
+
+}
+
+@media (min-width: 768px){
+
+    h1 {
+        font-weight: 700;
+        font-size: 25px; 
+        
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 19px;
+    }
+    
+    h3 {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+    h5 {
+        font-weight: 300;
+        font-size: 15px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .w1{ 
+        display: none;
+
+    }
+    .w2{
+        display: block;
+        float: right;
+        text-align: end;
+        padding-top: 12vmin;
+        padding-right: 10vw;
+        width: 5vw;
+
+    }
+    
+
+    .profile{
+  
+
+        width: 30vw;
+        height: auto;
+    }
+
+    .profile img{
+
+    
+        width: 30vw;
+        height: auto;
+        margin-bottom: 2vmin;
+    }
+
+    .GradientCV{
+
+        top: 40vh;
+        width: 100%;
+        height: 3vh;
+        filter: blur(30px);
+        transform: scale(0.7,2);  
+    }
+    .GradientWorks{
+        bottom: 0vh;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
+        filter: blur(10px);
+        transform: scale(1.2,3);
+        
+    }
+    .GradientContact{
+        left:20vw;
+        bottom:30vh;
+        width: 100%;
+        height: 6vh;
+        filter: blur(80px);
+        background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+        transform: scale(1,2);  
+      
+    }
+    
+    .GradientContact2{
+        left:50vw;
+        bottom:20vh;
+        width: 30vw;
+        height: 3vh;
+        filter: blur(40px);
+        background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+        transform: scale(1,2.5);  
+      
+    }
+    .image {
+        margin-top: 0vmin;
+        margin-bottom: 0vmin;
+        
+        
+    }
+    
+    .image img {
+  
+        width: 30vw;
+        height: auto;
+        left:10vw; 
+    }
+    .image img:hover {
+        width: 31vw;
+        height: auto;
+        right:10.5vw;
+        top:0.7vh;
+    }
+   
+
+}
+@media (min-width: 1000px){
+
+    h1 {
+        font-weight: 700;
+        font-size: 30px;  
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 19px;
+    }
+    
+    h3 {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+    h5 {
+        font-weight: 300;
+        font-size: 15px;
+    }
+    
+    p{
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+
+
+    .profile img{
+
+        width: 24vw;
+        height: auto;
+        margin-bottom: 2vmin;
+        align-items: center;
+    }
+
+    .GradientCV{
+
+        top: 50vh;
+        width: 100%;
+        height: 5vh;
+        filter: blur(30px);
+        transform: scale(0.7,2);  
+    }
+    .GradientWorks{
+        bottom: 0vh;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
+        filter: blur(10px);
+        transform: scale(1.2,3);
+        
+    }
+    .GradientContact{
+        left:20vw;
+        bottom:30vh;
+        width: 100%;
+        height: 6vh;
+        filter: blur(80px);
+        background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+        transform: scale(1,2);  
+      
+    }
+    
+    .GradientContact2{
+        left:50vw;
+        bottom:20vh;
+        width: 30vw;
+        height: 3vh;
+        filter: blur(40px);
+        background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+        transform: scale(1,2.5);  
+      
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     
+        width:70vw;
+        
+        
+        
+    
+       
+    }
+    .image {
+        position: relative;
+        margin-left: 5vw;
+        width: 15vw;  
+        right:7vw;
+       
+        
+    }
+    
+    .image img {
+    
+  
+        width: 15vw;
+        height: auto;
+        left:0vw; 
+        margin-bottom: 8vh;
+      
+    }
+    .image img:hover {
+        width: 16vw;
+        height: auto;
+        right:21.5vw;
+        top:0.7vh;
+    }
+
+    .overlay {
+        position: fixed;
+        left: 40vw;
+        bottom: 50vh;
+        width: auto;
+        height: auto;
+        max-width: 12px;
+        max-height: 8vmin;
+        overflow-wrap: normal;
+        text-align: justify;
+     
+      }
+
+    
+        
+     
+
+}
