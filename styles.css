@@ -304,7 +304,7 @@ p{
  
   }
 
-.image:hover .overlay {
+.image:hover, .image:focus, .image:active:hover, .overlay {
     opacity: 1;
 }
 
@@ -373,7 +373,7 @@ p{
     margin-right: auto;
     width: auto;
     height: auto;
-    max-width: 70%;
+    max-width: 70vw;
     padding-bottom: 10vmin;
     
 }
@@ -696,6 +696,13 @@ footer h3{
         text-align: justify;
      
       }
+
+      .image:hover .overlay {
+        opacity: 1;
+    }
+    .image:focus, .image:active:hover, .overlay {
+        opacity: 0;
+    }
 
     
         
