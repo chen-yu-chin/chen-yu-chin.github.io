@@ -99,6 +99,7 @@ body {
 .email {  
     margin-top: 10vmin;
     text-align: center;
+    z-index: 11;
    
 }
 
@@ -106,6 +107,7 @@ body {
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
     color: #000000;
+
 }
 
 .email h3{
@@ -117,6 +119,7 @@ body {
     font-weight: 400;
     text-decoration-line: underline;
     text-decoration-style: wavy; 
+    
 }
 
 .email img { 
@@ -144,6 +147,7 @@ body {
     padding-top: 10vmin;
     padding-bottom: 20vmin;
     color: #000000;
+    
    
   
 }
@@ -159,6 +163,7 @@ body {
 
 .partner a{
     margin-left: 10px;
+    z-index: 10;
     
 
 }
