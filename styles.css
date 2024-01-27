@@ -304,7 +304,7 @@ p{
  
   }
 
-.image:hover, .image:focus, .image:active:hover, .overlay {
+.image:hover .overlay {
     opacity: 1;
 }
 
@@ -407,7 +407,13 @@ p{
 }
 
 #text {
+    display: block;
     padding-bottom: 10vmin;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: center;
+    text-align: justify-all;
+
  
 }
 
