@@ -226,6 +226,15 @@ h5 {
     color: #000000;
 }
 
+h6{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 20px;
+    color: #00000040;
+   
+
+}
+
 p{
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
