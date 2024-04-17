@@ -11,8 +11,37 @@ body {
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 8vmin;
-    
+}
 
+.navigationP {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 8vmin;
+  
+}
+.navigationP h3{
+    border-bottom: 3px solid #ffffff ;
+    text-align: left;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+    
+    
+  }
+
+.navigationP h3:hover {
+    cursor: pointer;
+    background-color: rgb(106, 255, 0);
+    border-top: 3px solid rgb(106, 255, 0) ;
+    border-bottom: 3px solid rgb(106, 255, 0) ;
+  }
+
+.fotogallery{
+    display: none;
+ 
+}
+.fotogallery.active{
+    display: block;
+ 
 }
 
 .navigation a {
@@ -131,6 +160,51 @@ body {
     font-size: 15px;
 }
 .email img:hover{
+    filter: sepia(100%);
+    width: 20px;
+    height: auto;
+
+}
+.more {  
+    text-align: center;
+   
+}
+
+
+.more h3{
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+    
+}
+
+.more img { 
+    width: 15px;
+    height: auto;
+}
+.more a{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    
+}
+.more h2:hover{
+    color: #ffa75a;
+    font-size: 15px;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    
+}
+.more h3:hover{
+    background-color: #ffffff;
+    border-bottom: #ffffff;
+    border-top: #ffffff;
+    cursor: auto;
+    
+}
+.more img:hover{
     filter: sepia(100%);
     width: 20px;
     height: auto;
@@ -300,6 +374,8 @@ p{
     object-fit: cover;
     right:0vw; 
 }
+
+
 
 .overlay {
     position: sticky;
@@ -578,12 +654,14 @@ footer h3{
         height: auto;
         left:10vw; 
     }
+
     .image img:hover {
         width: 31vw;
         height: auto;
         right:10.5vw;
         top:0.7vh;
     }
+
    
 
 }
@@ -671,14 +749,20 @@ footer h3{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-     
         width:70vw;
-        
-        
-        
-    
-       
+     
     }
+
+
+
+    .fotogallery.active{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:70vw;
+     
+    }
+
     .image {
         position: relative;
         margin-left: 5vw;
@@ -697,6 +781,8 @@ footer h3{
         margin-bottom: 8vh;
       
     }
+
+
     .image img:hover {
         width: 16vw;
         height: auto;
@@ -723,6 +809,7 @@ footer h3{
     .image:focus, .image:active:hover, .overlay {
         opacity: 0;
     }
+
 
     
         
