@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html"> ✴ CV ✴</a>
+        <a href="contact.html">{ contact }</a>
+    </div>
+    <div class="GradientC" id="GradientC"></div>
+ 
+    <div class="container" id="container" > 
+
+        <div class="w">
+            <h3>works </h3>    
+        </div>
+        <p><br></p>
+        
+        <div class="gallery" id="gallery">
+        </div>
+        <!--<div id="work" class="work">
+            <span class="close" onclick="closeWork()">&times;</span>
+            <div id="content" class="content">  
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div>
+            <div id="work-image" class="work-images"></div>
+            
+            <div id="work-images" class="work-images"></div>
+            <div id="media" class="media"></div>
+            <h3 id="description"></h3>
+        </div>-->
+       
+        </div>
+        <div class="GradientWorks" id="GradientWorks">
+        </div>
+        <div class="pad" id="pad">
+        </div>
+    </div>
+    
+    <script>
+        function showImages(images) {
+            const gallery = document.getElementById('gallery');
+
+            images.forEach((image) => {
+                const imageDiv = document.createElement('div');
+                imageDiv.className = 'image';
+                imageDiv.onclick = () => openWork(image.title);
+                //imageDiv.onclick = () => openWork(image.path, image.title, image.year, image.text, image.imagePaths, image.media, image.w, image.h, image.description);
+
+                const img = document.createElement('img');
+                img.src = image.path;
+                img.alt = image.title;
+
+                imageDiv.appendChild(img);
+                gallery.appendChild(imageDiv);
+
+                const overlayDiv = document.createElement('div');
+                overlayDiv.className = 'overlay';
+                const txt = document.createElement('h3');
+                txt.className = 'txt';
+                txt.textContent = image.title;
+                overlayDiv.appendChild(txt);
+                imageDiv.appendChild(overlayDiv);
+            });
+        }
+
+     
+            const images = [
+                { path: 'img/cloudr.jpg', title: 'La Tête dans les Nuages', year: '2024', text: 'Video Installation', imagePaths: ['img/cloud.png', 'img/cloud1.png'],media: ['https://www.youtube.com/embed/ng4wogTsPC4?si=bVaYNvVS5iM3lsiz&amp;controls=0'],w:'80vw', h:'80vmin', description: ''},
+                { path: 'img/dualr.jpg', title: 'Dual-Channel II', year: '2024', text: 'Two-Channel Video, Three-Channel Sound', imagePaths: ['img/dual.png', 'img/dual1.png'],media: ['https://www.youtube.com/embed/ng4wogTsPC4?si=bVaYNvVS5iM3lsiz&amp;controls=0'],w:'80vw', h:'80vmin', description: '"Director: Lin Pei-Yao<br>Performers: Peng Wei, Chou Ai-Hsuan<br>Cinematography: Ko Lai-He<br>Art Design: Lin Pei-Yao<br>Shooting Assistant: Chu Yun-Rung<br>On-Site and Post-Production Sound Recording: Justin Lin<br>Video Editing & Post-Production: Lin Pei-Yao<br>Sound Design: Chen Yu-Chin<br>Audio-Visual Software & Hardware Integration: Chen Yu-Chin<br>Rehearsal Footage: Chu Yun-Rung"'},
+                { path: 'img/Rr.jpg', title: 'the Right channel', year: '2024', text: 'Sculpture', imagePaths: ['img/T2.jpg', 'img/T3.jpg', 'img/T4.jpg'],w:'0vw', h:'0vmin', description: '“the Right channel” is a proposal of Anti-Media Listening, through modifications of a everyday use earphone. Without a source input, the earphone sculpture does not impose any sound or intention upon the user. Instead, it encourages people to freely listen to what is happening around them in the present moment.'},
+                { path: 'img/tpfsbr.jpg', title: 'TENDON / PULSE / FLESH / SKIN / BONE', year: '2023', text: 'Spatial Sounds, Wearable Devices', imagePaths: ['img/T2.jpg', 'img/T3.jpg', 'img/T4.jpg'],w:'0vw', h:'0vmin', description: 'The conceptualization of “TENDON/PULSE/FLESH/SKIN/BONE” is based on the Ambisonics system and explores an alternative form of composition and sonic expression. The project starts from the senses of bodily perception and spatial awareness, aiming to integrate the sound field and the body using wearable devices. Through common and abstract characteristics of auditory and tactile realms, associations between time and space are established and the field is formed via the senses. Further revealing the dialogue and reciprocal relationship between the body, space, environment, as well as the microcosm and macrocosm of the universe. The main research and experimental directions of this project are how sound can be used to push, pull, extend, cut, compress, and disturb space, while incorporating the body as part of the sound space. '},
+                { path: 'img/LMTr.jpg', title: 'Landscape, Memory, and Time', year: '2023', text: 'Generative Soundscapes and Visuals', imagePaths: ['img/LMT9.png', 'img/LMT1.png'],w:'0vw', h:'0vmin', description:'“Landscape, Memory, and Time: Waves” is a real-time generative visual and soundscape project that explores the collective memory of the ocean from the perspective of listening and digital data translation. From field recordings of the sea, memories by the beach, to imaginative renderings of the ocean, a digital soundscape is composed by sampling and re-synthesizing these audio files sourced from individuals on the internet in real-time through algorithms. The visual presents a virtual coastal scene by simulating the images of waves and sun generated from analyzed sound wave data. In the process of transformation between physical waves, sound waves and visual waves, this work presents a slow, contemplative landscape situated in the corner of the accelerated and information overload cyberspace.'},
+                { path: 'img/SBTr.png', title: 'Snot, Booger, Tears', year: '2023', text: 'Two-Channel Video, Eight-Channel Sound, Poetry (Collaboration with Lilac RED)', imagePaths: ['img/SBT.png'], media: ['https://player.vimeo.com/video/813180262?h=5fd57ded39&title=0&byline=0&portrait=0'], w:'80vw', h:'80vmin', description:'About time, about emotions. About others and self. About the world and humanity. About fragments and remnants. The work collected the eyes and mouths of unfamiliar friends, intimate friends, and strangers, leaving traces intentionally or unintentionally. There are also records of houses, ruins, and lives that will soon disappear. The poetry reveals personal emotions about the world and attachment to life and time. The sound dispersed from different speakers to all the corners, colliding with the words in the space. Sometimes, it requires a deliberate approach to listen and form another temporal soundscape.'},
+                { path: 'img/Ohr.png', title: 'Oh, le flâneur', year: '2022', text: 'Two-Channel Video, Stereo Sound, Poetry (Collaboration with Lilac RED)',imagePaths: ['img/Oh.png'], media: ['https://player.vimeo.com/video/881492080?h=5fd57ded39&title=0&byline=0&portrait=0'], w:'80vw', h:'80vmin', description:''},
+                { path: 'img/43r.png', title: '43', year: '2022', text: 'Visual', imagePaths: ['img/43.png', 'img/431.png', 'img/432.jpg'],w:'0vw', h:'0vmin', description:''},
+                { path: 'img/BUG4.png', title: 'BUG', year: '2022', text: 'Performance', imagePaths: ['img/BUG.jpg', 'img/BUG2.jpg', 'img/BUG3.jpg'],w:'0vw', h:'0vmin', description:''},
+                { path: 'img/Kr.png', title: '16:31:34, 19:37:06, 15:21:58, 12:49:47', year: '2021', text: 'Performance', imagePaths: ['img/K.jpg', 'img/K2.jpg', 'img/K3.jpg'],w:'0vw', h:'0vmin', description:''},
+                { path: 'img/lr.png', title: 'leftover', year: '2021', text: 'Performance', imagePaths: ['img/leftover.png', 'img/leftover2.png', 'img/leftover3.png'], media: ['https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1482461788&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false'], w:'80vw', h:'20vmin', description:'The inspiration of my works usually comes in scattered thoughts or flowing consciousness, an abstract feeling, an ambience. Sometimes I’m able to grasp some of it, sometimes they just pass by. The performance “leftover” is an experimental and sentimental approach of me to perform sound. I set up a space with an armchair and a ladder, then placed two microphones beside them and also several handmade contact microphones on the chair. Throughout the whole performance I climbed the ladder and then I threw myself onto the armchair, the impact was captured in sound every time I jumped off. The recordings kept on replaying and evolving, overlapping with the feedback from the microphones, creating a scene of absurdity and chaos.'},
+                { path: 'img/Prr.png', title: 'Pending', year: '2021', text: 'Computer Animation', imagePaths: ['img/P1.png', 'img/P2.png', 'img/P3.png', 'img/P4.png'],w:'0vw', h:'0vmin',description:"The work showcases my imagination and contemplation about the internet and the future. The thoughts start with reflecting how we, who live in the internet culture of this era, perceive, utilize and consume time. The protagonist of the video is a character who lives in the internet, the core of the content is shaped by the protagonist's introspection and whispered musings, coupled with the use of symbols that resonate with the viewers to depict a snapshot of the times."},
+                { path: 'img/voidr.png', title: 'VOID', year: '2020', text: 'Performance', imagePaths: ['img/VOID.jpg'],w:'0vw', h:'0vmin',description:'“void" is an audio-visual exploration of feedback systems setting in the given moment. In the form of live-coding and improvisations, which are conventional practices in the audio-visual performance scene, I want to create an experience that is not only instantaneous and spontaneous but also interconnects every element within the particular moment. During the performance, all audible occurrences were recorded, capturing the acoustic of the place, the audience’s presence, and the subtle movements of the performer. Subsequently, the recordings were collected, sliced, deformed, and re-played. Originating from the spatial characteristics and unfolding processes, the sounds continued to evolve through their relationship with the entirety of the performance environment. In that way, not only the images and sound were in dialogue, but the whole space, time and individuals present, forming a cycle that keeps on absorbing each other, and then releases.'},
+                { path: 'img/Cr.png', title: 'CONFESSION', year: '2020', text: 'Experimental Theatre', imagePaths: ['img/C.jpg', 'img/C5.png', 'img/C2.jpg', 'img/C3.jpg'], w:'0vw', h:'0vmin',description:''}
+            ];
+
+            showImages(images);
+
+            function openWork(title) {
+                const withoutSlashes = title.replace(/\//g, '');
+                const formattedTitle = withoutSlashes.replace(/\s+/g, '_').toLowerCase();;
+                window.location.href = `${formattedTitle}.html`;
+            }
+
+            /*function openWork(imagePath, title, year, text, imagePaths, media, w, h, description) {
+            const gallery = document.getElementById('gallery');
+            const work = document.getElementById('work');
+            const workImage = document.getElementById('work-image');
+            const workImages = document.getElementById('work-images');
+            const Title = document.getElementById('title');
+            const Year = document.getElementById('year');
+            const Description = document.getElementById('description');
+            const Text = document.getElementById('text');
+            const Media = document.getElementById('media');
+            work.style.display = 'block';
+            gallery.style.opacity = 0;
+            workImage.innerHTML = "";
+            workImages.innerHTML = "";
+            Title.innerText = title;
+            Description.innerText = description;
+            Year.innerText = year;
+            Text.innerText = text;
+            Media.innerHTML = "";
+            const ww = document.createElement('img');
+            ww.src = imagePaths[0];
+            ww.style.width = "100%";
+            workImage.appendChild(ww);
+
+            if (w) {
+                Media.style.width = w;
+            }
+            if (h) {
+                Media.style.height = h;
+            }
+
+            for (let i = 1; i < imagePaths.length; i++) {
+                const img = document.createElement('img');
+                img.src = imagePaths[i];
+                img.style.width = "100%";
+                workImages.appendChild(img);
+            }
+            for (let i = 0; i < media.length; i++) {
+                const iframe = document.createElement('iframe');
+                iframe.src = media[i];
+                if (w) {
+                    iframe.style.width = w;
+                }
+                if (h) {
+                    iframe.style.height = h;
+                }
+                iframe.frameBorder = "0";
+                iframe.allowFullscreen = true;
+                Media.appendChild(iframe);
+            }
+        }
+        function closeWork() {
+            const work = document.getElementById('work');
+            const gallery = document.getElementById('gallery');
+            work.style.display = 'none';
+            gallery.style.opacity = 1;
+        }*/
+
+            
+
+
+
+
+            
+    </script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+
+<footer>
+    <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+    <h3>2 0 2 4</h3>
+</footer>
+</html>

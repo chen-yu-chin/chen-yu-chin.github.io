@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="work" class="work">
+        <div id="content" class="content">
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div>
+            <div id="work-image" class="work-image"></div>
+        
+            <h3 id="description"></h3>
+            <h3>"On Sea Monster as Medium" is an ongoing artistic research project that proposes and connects multiple issues through the lens of sea monster studies. Working across artistic practice, speculative research, and writing to develop intersecting discourses on media, ecology, technology, colonialism, geo-relations, and identity.
+                <br><br>
+                The project currently includes "The Bloop Case Study" ( <a href="bloop.html">written</a> and <a href="https://soundcloud.com/yuchinc/on-sea-monster-as-medium-the-bloop-case-study-audio-paper">audio paper</a> ) which examines how the formation of “Bloop” sea monster and its internet phenomenon link mythology stories, military agendas, undersea infrastructure, climate change, internet forums and media platforms into a complex cross-temporal ecosystem. 
+                <br><br>
+                The radio play <a href="wet.html">“The Wetness of Slow Devour"</a> developed during the residency at ZKM, reinterprets underwater recordings captured around Karlsruhe, including the Alb River, Rhine River, and nearby harbor, through acts of listening, connecting, and misunderstanding. Combining electroacoustic composition, text, and vocal narratives, it creates a site of sea monster mythology and oceanic imagination to explore the experiences and sensations of devouring and being devoured.
+            </h3>
+        </div>
+            
+        <div class="more">
+            <a href="works.html">↩︎ </a>
+        </div>
+            
+        <footer>
+            <br><br>
+            <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+            <h3>2 0 2 4</h3>
+            <br>
+        </footer>
+    </div>   
+
+
+    <script>
+        const images = [
+        {
+    path: '',
+    title: 'On Sea Monster As Medium',
+    year: '2024',
+    text: 'Artistic Research',
+    imagePaths: ['img/SM.png'],
+    media: [''],
+    w: '70vw',
+    h: 'auto',
+    description: ''
+}
+        ];
+
+        function openWork() {
+            const work = document.getElementById('work');
+            const workImage = document.getElementById('work-image');
+            const Title = document.getElementById('title');
+            const Year = document.getElementById('year');
+            const Description = document.getElementById('description');
+            const Text = document.getElementById('text');
+            const Media = document.getElementById('media');
+            
+            const { title, description, year, text, imagePaths, media, w, h } = images[0];
+
+            work.style.display = 'block';
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            
+            Title.innerText = title;
+            Description.innerText = description;
+            Year.innerText = year;
+            Text.innerText = text;
+            Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
+        }
+
+        openWork();
+    </script>
+
+</body>
+
+</html>

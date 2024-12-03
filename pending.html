@@ -14,43 +14,41 @@
 
 <body>
 
-    <div class="container" id="container">
-
-        <div id="work" class="work">
-            
+        <div id="work" class="work">  
             <div id="content" class="content">
                 <div class="word">
                     <h2 id="title"></h2>
                     <h5 id="year"></h5>
                     <h5 id="text"></h5>
                 </div>
-                <div id="work-image" class="work-images"></div>
-
-                <div id="work-images" class="work-images"></div>
-                <div id="media" class="media"></div>
+                <div id="work-image" class="work-image"></div>
                 <h3 id="description"></h3>
+                <div id="media" class="media"></div>
+                <div class="more">
+                    <a href="works.html">↩︎</a>
+                </div>
             </div>
             <footer>
+                <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
                 <h3>2 0 2 4</h3>
+                <br>
             </footer>
         </div>
-        <div class="pad" id="pad"></div>
-    
-    </div>
+
 
     <script>
         const images = [
 
         {
-    path: 'img/Prr.png',
     title: 'Pending',
     year: '2021',
     text: 'Computer Animation',
     imagePaths: ['img/P1.png', 'img/P2.png', 'img/P3.png', 'img/P4.png'],
-    w: '0vw',
-    h: '0vmin',
-    description: 'The work showcases my imagination and contemplation about the internet and the future. The thoughts start with reflecting how we, who live in the internet culture of this era, perceive, utilize and consume time. The protagonist of the video is a character who lives in the internet, the core of the content is shaped by the protagonist\'s introspection and whispered musings, coupled with the use of symbols that resonate with the viewers to depict a snapshot of the times.'
+    media: ['https://www.youtube.com/embed/0sL63esVgk8?si=F9962d62n-gdFCpY?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=0'],
+    w: '100%',
+    h: '50vmin',
+    description: 'The work showcases imagination and contemplation about the internet and the future. The thoughts start with reflecting how we, who live in the internet culture of this era, perceive, utilize and consume time. The protagonist of the video is a character who lives in the internet, the core of the content is shaped by the protagonist\'s introspection and whispered musings, coupled with the use of symbols that resonate with the viewers to depict a snapshot of the times.'
 }
 
 
@@ -62,7 +60,6 @@
         function openWork() {
             const work = document.getElementById('work');
             const workImage = document.getElementById('work-image');
-            const workImages = document.getElementById('work-images');
             const Title = document.getElementById('title');
             const Year = document.getElementById('year');
             const Description = document.getElementById('description');
@@ -72,8 +69,7 @@
             const { title, description, year, text, imagePaths, media, w, h } = images[0];
 
             work.style.display = 'block';
-            workImage.innerHTML = `<img src="${imagePaths[0]}" style="width: 100%;">`;
-            workImages.innerHTML = imagePaths.slice(1).map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
             Title.innerText = title;
             Description.innerText = description;
@@ -84,7 +80,6 @@
 
         openWork();
     </script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 
 </html>

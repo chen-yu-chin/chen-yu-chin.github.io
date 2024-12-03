@@ -14,7 +14,6 @@
 
 <body>
 
-    <div class="container" id="container">
 
         <div id="work" class="work">
             
@@ -24,29 +23,30 @@
                     <h5 id="year"></h5>
                     <h5 id="text"></h5>
                 </div>
-                <div id="work-image" class="work-images"></div>
-
-                <div id="work-images" class="work-images"></div>
+                <div id="work-image" class="work-image"></div>
                 <div id="media" class="media"></div>
                 <h3 id="description"></h3>
+                <h6>Installation Exhibited at New Taipei City Arts Center<br><br><br>Video: Lilac RED<br>Poetry:  Lilac RED<br>Sound: Yuchin Chen</h6>
+                <div class="more">
+                    <a href="sound.html">↩︎</a>
+                 </div>
             </div>
             <footer>
+                <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
                 <h3>2 0 2 4</h3>
+                <br>
             </footer>
         </div>
-        <div class="pad" id="pad"></div>
     
-    </div>
 
     <script>
         const images = [
         {
-            path: 'img/sbt_A4.png',
             title: 'Snot, Booger, Tears',
             year: '2023',
-            text: 'Two-Channel Video, Eight-Channel Sound, Poetry (Collaboration with Lilac RED)',
-            imagePaths: ['img/SBT.png'],
+            text: 'Eight-Channel Sound Installation for Two-Channel Video and Poetry',
+            imagePaths: ['img/SBT1.png'],
             media: ['https://player.vimeo.com/video/813180262?h=5fd57ded39&title=0&byline=0&portrait=0'],
             w: '100%',
             h: '50vmin',
@@ -59,7 +59,6 @@
         function openWork() {
             const work = document.getElementById('work');
             const workImage = document.getElementById('work-image');
-            const workImages = document.getElementById('work-images');
             const Title = document.getElementById('title');
             const Year = document.getElementById('year');
             const Description = document.getElementById('description');
@@ -69,8 +68,7 @@
             const { title, description, year, text, imagePaths, media, w, h } = images[0];
 
             work.style.display = 'block';
-            workImage.innerHTML = `<img src="${imagePaths[0]}" style="width: 100%;">`;
-            workImages.innerHTML = imagePaths.slice(1).map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
             Title.innerText = title;
             Description.innerText = description;

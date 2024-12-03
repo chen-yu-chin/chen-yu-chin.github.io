@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+        <div id="work" class="work">    
+            <div id="content" class="content">
+                <div class="word">
+                    <h2 id="title"></h2>
+                    <h5 id="year"></h5>
+                    <h5 id="text"></h5>
+                </div>
+                <div id="work-image" class="work-image"></div>
+                <h3 id="description"></h3>
+                
+                <h6>“The Wetness of Slow Devour” was created in the studios of the ZKM | Hertzlab as part of the artist-in-residency program "Spatial Storytelling" and was funded by the Fördergesellschaft ZKM / HfG e. V.. The recording of the piece was made by sound director Sebastian Schottke.  <br><br>© ZKM | Center for Art and Media Karlsruhe, photo: Laura Benetschik.</h6>
+                <div class="more">
+                    <a href="works.html">↩︎ </a>
+                 </div>
+            </div>
+            <footer>
+                <br><br>
+                <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+                <h3>2 0 2 4</h3>
+                <br>
+            </footer>
+        </div>  
+
+
+    <script>
+        const images = [
+            {
+                title: 'The Wetness of Slow Devour',
+                year: '2024',
+                text: 'Spatial Radio Play',
+                imagePaths: ['img/w1.jpg', 'img/w2.jpg', 'img/w3.jpg', 'img/w.jpg'],
+                media: [''],
+                w: '100%',
+                h: '50vmin',
+                description: 'The ocean has long been a source of fear and fascination, with mythology shaping humanity’s perception of the sea and its inhabitants. Sea monsters embody these fears, mysteries, and the unknown, manifesting both human anxieties and reverence for existences beyond us—and the fear of being devoured by them. The act of devouring is a constant process for humans, both as devourers and as the devoured. We devour energy, light, organisms, non-organisms, land, rivers, minerals, oil, others, love, intimacy - and at the same time, we are devoured by industry, capitalism, ideologies, networks, information, war, responsibilities, emotions, morality, possibilities, repetition, dreams, and reality. The Wetness of Slow Devour begins with sea monster mythology and oceanic imagination, exploring the states and experiences of devouring and being devoured, narrating intersecting sonic discourses across technological, social, ecological, and affective realities.'
+            }
+        ];
+
+        function openWork() {
+            const work = document.getElementById('work');
+            const workImage = document.getElementById('work-image');
+            const Title = document.getElementById('title');
+            const Year = document.getElementById('year');
+            const Description = document.getElementById('description');
+            const Text = document.getElementById('text');
+            const Media = document.getElementById('media');
+            
+            const { title, description, year, text, imagePaths, media, w, h } = images[0];
+
+            work.style.display = 'block';
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            
+            Title.innerText = title;
+            Description.innerText = description;
+            Year.innerText = year;
+            Text.innerText = text;
+            Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
+        }
+
+        openWork();
+    </script>
+
+</body>
+
+</html>

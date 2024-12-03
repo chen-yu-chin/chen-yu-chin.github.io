@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YU CHIN CHEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <div class="container" id="container" > 
+    <div class="navigationP">
+        
+
+        <h2><br></h2>
+        <h2><br></h2>
+        <h3 onclick="toggleDescription('leaves')">Leave(s)<br>*Interactive Installation*</h3>
+        <h3 onclick="toggleDescription('bug')">BUG<br>*Interactive Performance*</h3>
+        <h3 onclick="toggleDescription('confession')">Confession<br>*Sound Visualization*</h3>
+      
+        <br>
+        <br>
+      
+    </div>
+    <div class="more">
+        <a href="i.html">↩︎ </a>
+     </div>
+
+    </div>
+    
+
+        
+    <script>
+        function toggleDescription(id) {
+          var foto = document.getElementById(id);
+          /*foto.classList.toggle("active");*/
+          window.location.href = `${id}.html`;
+        }
+
+            
+        </script>
+  
+</body>
+<footer>
+    <br><br>
+    <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+    <h3>2 0 2 4</h3>
+    <br>
+</footer>
+</html>

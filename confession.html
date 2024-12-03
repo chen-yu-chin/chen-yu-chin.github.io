@@ -13,43 +13,39 @@
 </head>
 
 <body>
-
-    <div class="container" id="container">
-
         <div id="work" class="work">
-   
             <div id="content" class="content">
                 <div class="word">
                     <h2 id="title"></h2>
                     <h5 id="year"></h5>
                     <h5 id="text"></h5>
                 </div>
-                <div id="work-image" class="work-images"></div>
-
-                <div id="work-images" class="work-images"></div>
+                <div id="work-image" class="work-image"></div>
                 <div id="media" class="media"></div>
                 <h3 id="description"></h3>
+                <div class="more">
+                    <a href="interactive.html">↩︎</a>
+                 </div>
             </div>
             <footer>
+                <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
                 <h3>2 0 2 4</h3>
+                <br>
             </footer>
         </div>
-        <div class="pad" id="pad"></div>
-    
-    </div>
+
 
     <script>
         const images = [
         {
-    path: 'img/Cr.png',
     title: 'CONFESSION',
-    year: '2020',
-    text: 'Experimental Theatre',
-    imagePaths: ['img/C.jpg', 'img/C5.png', 'img/C2.jpg', 'img/C3.jpg'],
+    year: 'Sound Visualization',
+    text: 'Python, Touchdesigner',
+    imagePaths: ['img/11.png', 'img/12.png'],
     w: '0vw',
     h: '0vmin',
-    description: ''
+    description: 'Confession is a sound visualization serie that transfers peoples anger, guilt, sadness and memories into unque visuals, as a secret language.'
 }
 
 
@@ -62,7 +58,6 @@
         function openWork() {
             const work = document.getElementById('work');
             const workImage = document.getElementById('work-image');
-            const workImages = document.getElementById('work-images');
             const Title = document.getElementById('title');
             const Year = document.getElementById('year');
             const Description = document.getElementById('description');
@@ -72,8 +67,7 @@
             const { title, description, year, text, imagePaths, media, w, h } = images[0];
 
             work.style.display = 'block';
-            workImage.innerHTML = `<img src="${imagePaths[0]}" style="width: 100%;">`;
-            workImages.innerHTML = imagePaths.slice(1).map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
             Title.innerText = title;
             Description.innerText = description;
@@ -84,7 +78,7 @@
 
         openWork();
     </script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
+
 </body>
 
 </html>

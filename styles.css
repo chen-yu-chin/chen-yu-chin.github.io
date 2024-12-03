@@ -1,17 +1,56 @@
 body {
     margin: 0;
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
     font-weight: 400;
     font-size: 3vmin;  
   
 }
+
+.container {
+    position: relative;
+    width: 50vw;
+    height: auto;
+    margin-left: 25vw;
+    z-index:2;
+    max-height: 100%;
+    overflow: hidden;
+}
   
 .navigation {
-    background-color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 8vmin;
 }
+.navigation a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 2vmin;
+    font-size: 13px;
+}
+.navigation a:hover {
+    
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+.navigationW {   
+    text-align: center;
+    padding-top: 8vmin;
+  
+}
+.navigationW h3{
+    text-align: left;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;  
+    
+  }
+.navigationW h3:hover {
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    border-top: 3px solid rgb(243, 243, 243) ;
+    border-bottom: 3px solid rgb(243, 243, 243) ;
+    color: #5845ff;
+  }
 
 .navigationP {
     background-color: rgb(255, 255, 255);
@@ -24,10 +63,8 @@ body {
     text-align: left;
     padding-top: 1vmin;
     padding-bottom: 1vmin;
-    
-    
+      
   }
-
 .navigationP h3:hover {
     cursor: pointer;
     background-color: rgb(106, 255, 0);
@@ -42,27 +79,6 @@ body {
 .fotogallery.active{
     display: block;
  
-}
-
-.navigation a {
-    text-decoration: none;
-    color: rgb(118, 204, 222);
-    margin: 2vmin;
-    font-size: 13px;
-}
-
-.navigation a:hover {
-    color: #ffa75a;
-    font-size: 15px;
-}
-
-.container {
-    position: relative;
-    width: 50vw;
-    height: auto;
-    margin-left: 25vw;
-    z-index:2;
-    max-height: 100%;
 }
 
 .profile img{
@@ -83,8 +99,22 @@ body {
     background: linear-gradient(to left,rgba(255, 255, 255, 0)0%, rgb(255, 159, 118)15%, rgb(250, 255, 118)40%,rgb(32, 192, 255)85%,rgba(255, 255, 255, 0)100%);
     z-index:auto;
     transform: scale(0.7,2);  
+    pointer-events: none;
 }
+.GradientWorks{
 
+    display: block;
+    position: sticky;
+    bottom: 0vh;
+    width: 100%;
+    height: 15vh;
+
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
+    filter: blur(20px);
+    transform: scale(1,5);
+    z-index: auto;
+    pointer-events: none;
+}
 .GradientC{
     display: block;
     position: sticky;
@@ -100,45 +130,44 @@ body {
 }
 .GradientContact{
     display: block;
-    position: relative;
-    left:20vw;
-    bottom:30vh;
-    max-width:80vw;
-    height: 6vh;
+    position: absolute;
+    bottom: 0vh;
+    width:80vw;
+    height:10vh;
+ 
     filter: blur(40px);
-    background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-    z-index:auto;
+    background: linear-gradient(to right, rgb(118, 222, 163)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+    z-index:0;
     transform: scale(1,2);  
+    pointer-events: none;
+  
+}
+.GradientContact2{
+    bottom: 0vh;
+    display: block;
+    position: absolute;
+    width: 12vw;
+    
+    filter: blur(50px);
+    background: linear-gradient(to bottom, rgb(255, 255, 255)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
+    z-index:0;
+    transform: scale(1,1);  
+    pointer-events: none;
   
 }
 
-.GradientContact2{
-    display: block;
-    position: relative;
-    left:50vw;
-    bottom:20vh;
-    width: 30vw;
-    height: 3vh;
-    filter: blur(20px);
-    background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-    z-index:auto;
-    transform: scale(1,2.5);  
-  
-}
 .email {  
     margin-top: 10vmin;
     text-align: center;
     z-index: 11;
    
 }
-
 .email a{
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
     color: #000000;
 
 }
-
 .email h3{
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
@@ -150,45 +179,45 @@ body {
     text-decoration-style: wavy; 
     
 }
-
-.email img { 
-    width: 15px;
-    height: auto;
-}
 .email h3:hover{
     color: #ffa75a;
     font-size: 15px;
 }
+.email img { 
+    height: 15px;
+    width: auto;
+}
 .email img:hover{
     filter: sepia(100%);
-    width: 20px;
-    height: auto;
+    width: auto;
+    height: 20px;
 
 }
+
 .more {  
     text-align: center;
    
 }
-
-
+.more a{
+    text-decoration-line: none;
+    text-decoration-style: wavy;
+    
+}
 .more h3{
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
     color: #000000;
-    font-size: 13px;
-    text-align: center;
-    font-weight: 400;
-    
-}
 
-.more img { 
-    width: 15px;
-    height: auto;
-}
-.more a{
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+    text-align: center;
     
+}
+.more h3:hover{
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    cursor: auto;
+    font-size: 15px;
+  
 }
 .more h2:hover{
     color: #ffa75a;
@@ -197,17 +226,14 @@ body {
     text-decoration-style: wavy;
     
 }
-.more h3:hover{
-    background-color: #ffffff;
-    border-bottom: #ffffff;
-    border-top: #ffffff;
-    cursor: auto;
-    
+.more img { 
+    width: auto;
+    height: 15px;
 }
 .more img:hover{
     filter: sepia(100%);
-    width: 20px;
-    height: auto;
+    width: auto;
+    height: 20px;
 
 }
 
@@ -222,10 +248,7 @@ body {
     padding-bottom: 20vmin;
     color: #000000;
     
-   
-  
 }
-
 .partner h3{
     margin-top: 5vmin; 
     white-space: nowrap;
@@ -234,11 +257,9 @@ body {
     font-weight: 400;
     color: #000000;
 }
-
 .partner a{
     margin-left: 10px;
-    z-index: 10;
-    
+    z-index: 10;  
 
 }
 .partner a h3{
@@ -262,53 +283,42 @@ h1 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     font-size: 20px;
-    color: #000000;
-    
+    color: #000000;  
     
 }
-
 h2 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
     font-weight: 300;
     font-size: 14px;
     color: #000000;
 }
-
 h3 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
     font-weight: 400;
     font-size: 13px;
     color: #000000;
     text-align: center;
 }
-
 h4 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
 }
-
 h5 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
     font-weight: 300;
     font-size: 10px;
     color: #000000;
 }
-
 h6{
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 800;
-    font-size: 20px;
-    color: #00000028;
+    font-weight: 300;
+    font-size: 10px;
+    color: #0000008d;
    
 
 }
-
 p{
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
@@ -317,46 +327,24 @@ p{
    
 
 }
+
 .w{
     position: relative;
     text-align: center;
     padding-top: 5vmin;
     text-align: center;
 }
-
 .w1{
     position: relative;
     text-align: center;
     padding-top: 5vmin;
     text-align: center;
 }
-
 .w2{
     display: none;
     
 }
-.w2 h1{
-    
-    
-}
 
-
-.GradientWorks{
-
-    display: block;
-    position: sticky;
-    bottom: 0vh;
-    max-width: 90vw;
-    height: 15vh;
-
-    background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
-    filter: blur(10px);
-    transform: scale(1.2,3);
-    
-}
-.pad{
-    padding:10vmin;
-}
 .image {
     display: block;
     cursor: pointer;
@@ -365,7 +353,6 @@ p{
     
     
 }
-
 .image img {
     position: relative;
     display: block;
@@ -374,8 +361,6 @@ p{
     object-fit: cover;
     right:0vw; 
 }
-
-
 
 .overlay {
     position: sticky;
@@ -405,7 +390,6 @@ p{
     top:0.7vh;
 }
 
-
 .txt {
 
     color: rgb(79, 79, 79);
@@ -413,52 +397,40 @@ p{
   
   }
   
-.work {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    overflow: auto;
-    
-}
+
 .content{
     display: block;
     position: relative;
     padding-top: 5vh;
+    
+     
 }
-#work-image {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    width: auto;
-    height: auto;
-    max-width: 70%;
-    max-height: 70%;
+.content h3{
+    padding-bottom: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: start;
+    overflow-wrap: break-word;
+    text-align: justify-all;
+}
+.content h6{
+    padding-bottom: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: start;
+    overflow-wrap: break-word;
+    text-align: justify-all;
 }
 
-.work-images {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    width: auto;
-    height: auto;
-    max-width: 70%;
-    max-height: 70%;
+
+.word{
+    text-align: center;
+    overflow-wrap: break-word;
+    text-align: justify-all;
+    padding-bottom: 5vmin;
 }
-.work-images img{
-    padding-bottom: 10vmin;
-}
+
 #media {
-    display: block;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
     width: auto;
@@ -467,79 +439,28 @@ p{
     padding-bottom: 10vmin;
     
 }
-
-.word{
-    display: block;
-    position: relative;
-
-  
-    text-align: center;
-    
-
-
+.work-image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
 }
-#title {
- 
-}
-
-#description {
-    display: block;
-    position: relative;
-    padding-bottom: 10vh;
-    margin-left: 15vw;
-    margin-right: 15vw;
-    text-align: start;
-    overflow-wrap: break-word;
-    text-align: justify-all;
-    
-
- 
-}
-
-#text {
-    display: block;
+.work-image img{
     padding-bottom: 10vmin;
-    margin-left: 15vw;
-    margin-right: 15vw;
-    text-align: center;
-    text-align: justify-all;
-
- 
 }
 
-.close {
-    display: block;
-    position: relative;
-    padding-top: 1.5vh;
-    left: 95vw;
-    width:100vw;
-    color: #7d7d7d;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 600;
-    font-size: 23px;
-    font-weight: light;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.close:hover {
-    color: #000000;
-    font-size: 25px;
-}
 
 footer{
-    background-color: rgb(255, 255, 255);
     text-align: center; 
-    padding: 5vmin;
-
 }
 footer h3{
-
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     color: #7e7e7e;
     font-size: 10px;
     font-weight: 400;
-
 }
 
 @media (min-width: 768px){
@@ -568,6 +489,7 @@ footer h3{
         font-weight: 300;
         font-size: 15px;
     }
+    
     p{
         font-weight: 400;
         font-size: 15px;
@@ -615,9 +537,10 @@ footer h3{
         bottom: 0vh;
         width: 100%;
         height: 15vh;
-        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
+        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
         filter: blur(10px);
-        transform: scale(1.2,3);
+        transform: scale(1.2,5);
+        
         
     }
     .GradientContact{
@@ -718,9 +641,9 @@ footer h3{
         bottom: 0vh;
         width: 100%;
         height: 15vh;
-        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(255, 187, 163)100%);
+        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
         filter: blur(10px);
-        transform: scale(1.2,3);
+        transform: scale(1.2,5);
         
     }
     .GradientContact{
