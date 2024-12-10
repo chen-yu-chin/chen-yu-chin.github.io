@@ -15,19 +15,22 @@
 <body>
 
         <div id="work" class="work">
-            <div id="content" class="content">
-                <div class="word">
-                    <h2 id="title"></h2>
-                    <h5 id="year"></h5>
-                    <h5 id="text"></h5>
-                </div>
-                <div id="work-image" class="work-image"></div>
-                <div id="media" class="media"></div>
-                <h3 id="description"></h3>
-                <div class="more">
-                    <a href="works.html">↩︎</a>
-                 </div>
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
             </div>
+            <div id="content" class="content">
+                
+                <div id="work-image" class="work-image"></div>
+                
+                <h3>I set up a space with an armchair and a ladder, then placed two microphones beside them and also several handmade contact microphones on the chair. I climbed the ladder and then I threw myself onto the armchair, the impact was captured in sound every time I jumped off. The recordings kept on replaying and evolving, overlapping with the feedback from the microphones, creating a scene of absurdity and chaos.</h3>
+                <div id="media" class="media"></div>
+            </div>
+            
+            <div class="more">
+                <a href="works.html">↩︎</a>
+             </div>
             <footer>
                 <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
@@ -45,9 +48,9 @@
     text: 'Performance',
     imagePaths: ['img/leftover.png', 'img/leftover2.png', 'img/leftover3.png'],
     media: ['https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1482461788&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false'],
-    w: '70vw',
+    w: '100%',
     h: 'auto',
-    description: 'I set up a space with an armchair and a ladder, then placed two microphones beside them and also several handmade contact microphones on the chair. I climbed the ladder and then I threw myself onto the armchair, the impact was captured in sound every time I jumped off. The recordings kept on replaying and evolving, overlapping with the feedback from the microphones, creating a scene of absurdity and chaos.'
+    description: ''
 }
 
 
@@ -69,10 +72,10 @@
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
-            Title.innerText = title;
-            Description.innerText = description;
-            Year.innerText = year;
-            Text.innerText = text;
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 

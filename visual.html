@@ -14,57 +14,66 @@
 
 <body>
 
-        <div id="work" class="work">
-            <div id="content" class="content">
-              
-                <div id="work-image" class="work-image"></div>
-                <br><br><br><br>
-                <div class="more">
-                    <a href="i.html">↩︎</a>
-                 </div>
-        
-            </div>
-            <footer>
-                <br><br>
-                <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
-                <h3>2 0 2 4</h3>
-                <br>
-            </footer>
+        <div id="content" class="content">
+
+                <div id="work-vis" class="work-vis"> </div>
+               
+                
+    
+            
         </div>
+        <div class="more">
+            <br><br>
+            <a href="i.html">↩︎</a>
+         </div>
+        <footer>
+            <br><br>
+            <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+            <h3>2 0 2 4</h3>
+            <br>
+        </footer>
     
 
     <script>
-        const images = [
-        {
-    title: '',
-    imagePaths: ['visual/tpfsb.png','visual/lmt.png','visual/j.png','visual/d.png','visual/heartclock.png','visual/z.png','visual/1.png','visual/10.png','visual/b.png','visual/u.png','visual/st.png','visual/w.png','visual/s.png','visual/oh.png','visual/w.jpg'],
-    w: '0vw',
-    h: '0vmin',
-    
-}
-
-
-
-
-
+        const works = [
+            { imagePath: 'visual/tpfsb.png', caption: '“Tendon / Pulse / Flesh / Skin / Bone” Banner Design' },
+            { imagePath: 'visual/lmt.png', caption: '“Landscape, Memory and Time” Poster Design' },
+            { imagePath: 'visual/j.png', caption: '“Tunnel Vision” Poster Design' },
+            { imagePath: 'visual/d.png', caption: '“Movement” Poster Design' },
+            { imagePath: 'visual/heartclock.png', caption: '“the heart clock ticks soft and mild” Poster Design' },
+            { imagePath: 'visual/z.png', caption: '“UNZIP” Poster Design' },
+            { imagePath: 'visual/1.png', caption: '“A heap of broken images in the Wasteland of forgetfulness” Visual Design' },
+            { imagePath: 'visual/b.png', caption: '“BUG” Visual Design' },
+            { imagePath: 'visual/u.png', caption: '“破ㄩ派” Logo Design' },
+            { imagePath: 'visual/st.png', caption: '“破ㄩ派” Exhibition Front Desk Design and 3D Simulation' },
+            { imagePath: 'visual/w.png', caption: '“LUCA” Light Installation 3D Simulation' },
+            { imagePath: 'visual/oh.png', caption: '“Oh, le flâneur” Video Installation 3D Simulation' },
+            { imagePath: 'visual/w.jpg', caption: '“Timeless Ripples” Interactive Installation Visual Design' }
+            
         ];
 
-        function openWork() {
-            const work = document.getElementById('work');
-            const workImage = document.getElementById('work-image');
-            const Title = document.getElementById('title');
-            const Media = document.getElementById('media');
-            
-            const { title, description, year, text, imagePaths, media, w, h } = images[0];
+        const workVis = document.getElementById('work-vis');
 
-            work.style.display = 'block';
-            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
+        works.forEach(work => {
+            const workItem = document.createElement('div');
+            workItem.classList.add('work-item');
             
-            Title.innerText = title;
-            Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
-        }
 
-        openWork();
+            const img = document.createElement('img');
+            img.src = work.imagePath;
+            img.alt = work.caption;
+           
+
+            const caption = document.createElement('p');
+            caption.classList.add('caption');
+            caption.innerText = work.caption;
+
+            workItem.appendChild(caption);
+            workItem.appendChild(img);
+           
+            workVis.appendChild(workItem);
+        });
+      
     </script>
 </body>
 

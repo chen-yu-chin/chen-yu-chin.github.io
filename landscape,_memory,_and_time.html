@@ -15,19 +15,28 @@
 <body>
 
         <div id="work" class="work">
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div>
             <div id="content" class="content">
-                <div class="word">
-                    <h2 id="title"></h2>
-                    <h5 id="year"></h5>
-                    <h5 id="text"></h5>
-                </div>
+                
                 <div id="work-image" class="work-image"></div>      
-                <h3 id="description"></h3>
+                
+                <h3>“Landscape, Memory, and Time” is a real-time generative visual and soundscape installation that explores the collective memory of the ocean from the perspective of listening and digital data translation. 
+                    <br><br>
+                    From field recordings of the sea, memories by the beach, to imaginative renderings of the ocean, a digital soundscape is composed by sampling and re-synthesizing these audio files sourced from individuals on the internet in real-time through algorithms. The visual presents a virtual coastal scene by simulating the images of waves and sun generated from analyzed sound wave data. 
+                    <br><br>
+                    In the process of transformation between physical waves, sound waves and visual waves, this work presents a slow, contemplative landscape situated in the corner of the accelerated and information overload cyberspace.
+                </h3>
                 <div id="media" class="media"></div>
+                
+            </div>
+            
                 <div class="more">
                     <a href="works.html">↩︎</a>
                  </div>
-            </div>
             <footer>
                 <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
@@ -46,7 +55,7 @@
             media: ['https://www.youtube.com/embed/5aEdHloMysY?si=b2MSFPlrE3-R8DUX?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=0'],
             w: '100%',
             h: '50vmin',
-            description: '“Landscape, Memory, and Time” is a real-time generative visual and soundscape installation that explores the collective memory of the ocean from the perspective of listening and digital data translation. From field recordings of the sea, memories by the beach, to imaginative renderings of the ocean, a digital soundscape is composed by sampling and re-synthesizing these audio files sourced from individuals on the internet in real-time through algorithms. The visual presents a virtual coastal scene by simulating the images of waves and sun generated from analyzed sound wave data. In the process of transformation between physical waves, sound waves and visual waves, this work presents a slow, contemplative landscape situated in the corner of the accelerated and information overload cyberspace.'
+            description: ''
 }
 
         ];
@@ -65,10 +74,10 @@
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
-            Title.innerText = title;
-            Description.innerText = description;
-            Year.innerText = year;
-            Text.innerText = text;
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 

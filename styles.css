@@ -6,6 +6,7 @@ body {
   
 }
 
+
 .container {
     position: relative;
     width: 50vw;
@@ -46,16 +47,15 @@ body {
   }
 .navigationW h3:hover {
     cursor: pointer;
-    background-color: rgb(243, 243, 243);
-    border-top: 3px solid rgb(243, 243, 243) ;
-    border-bottom: 3px solid rgb(243, 243, 243) ;
+    background-color: rgba(111, 111, 111, 0.1);
     color: #5845ff;
   }
 
 .navigationP {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     text-align: center;
     padding-top: 8vmin;
+
   
 }
 .navigationP h3{
@@ -81,17 +81,19 @@ body {
  
 }
 
+
 .profile img{
     position: relative;
+    top: 25vh;
     width: 50vw;
     height: auto;
-    margin-bottom: 2vmin;
+
 }
 
 .GradientCV{
     display: block;
     position: sticky;
-    top: 40vh;
+    bottom: 58vh;
     right:0vw;
     width: 100%;
     height: 2vh;
@@ -105,13 +107,13 @@ body {
 
     display: block;
     position: sticky;
-    bottom: 0vh;
+    bottom: 15vh;
     width: 100%;
     height: 15vh;
 
     background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
-    filter: blur(20px);
-    transform: scale(1,5);
+    filter: blur(10px);
+    transform: scale(1.2,5);
     z-index: auto;
     pointer-events: none;
 }
@@ -402,6 +404,8 @@ p{
     display: block;
     position: relative;
     padding-top: 5vh;
+
+    
     
      
 }
@@ -412,6 +416,7 @@ p{
     text-align: start;
     overflow-wrap: break-word;
     text-align: justify-all;
+    
 }
 .content h6{
     padding-bottom: 10vh;
@@ -428,6 +433,9 @@ p{
     overflow-wrap: break-word;
     text-align: justify-all;
     padding-bottom: 5vmin;
+    padding-top: 5vh;
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
 }
 
 #media {
@@ -445,11 +453,48 @@ p{
     margin-top: 15px;
     width: auto;
     height: auto;
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 70vw;
+    
 }
 .work-image img{
     padding-bottom: 10vmin;
+}
+
+.work-vis {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: auto;
+    height: auto;
+    max-width: 70vw;
+    
+}
+.work-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-align: start;
+    width: 70vw;
+    max-height: 7vh;
+    
+}
+.work-item:hover{
+    width: 70vw;
+    height:auto; 
+    max-height: none;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.work-item img {
+    display: block;
+    width: 70vw;
+    
+
+}
+.work-item:hover img{
+    width: 70vw;
+    height:auto; 
 }
 
 
@@ -462,6 +507,7 @@ footer h3{
     font-size: 10px;
     font-weight: 400;
 }
+
 
 @media (min-width: 768px){
 
@@ -509,61 +555,21 @@ footer h3{
 
     }
     
-
-    .profile{
-  
-
-        width: 30vw;
-        height: auto;
-    }
-
-    .profile img{
-
-    
-        width: 30vw;
-        height: auto;
-        margin-bottom: 2vmin;
-    }
-
     .GradientCV{
 
-        top: 40vh;
-        width: 100%;
+
         height: 3vh;
-        filter: blur(30px);
+        filter: blur(20px);
         transform: scale(0.7,2);  
+
+       
     }
-    .GradientWorks{
-        bottom: 0vh;
-        width: 100%;
-        height: 15vh;
-        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
-        filter: blur(10px);
-        transform: scale(1.2,5);
-        
-        
+    .profile img{
+        top: 15vh;
+        width: 50vw;
     }
-    .GradientContact{
-        left:20vw;
-        bottom:30vh;
-        width: 100%;
-        height: 6vh;
-        filter: blur(80px);
-        background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-        transform: scale(1,2);  
-      
-    }
-    
-    .GradientContact2{
-        left:50vw;
-        bottom:20vh;
-        width: 30vw;
-        height: 3vh;
-        filter: blur(40px);
-        background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-        transform: scale(1,2.5);  
-      
-    }
+
+   
     .image {
         margin-top: 0vmin;
         margin-bottom: 0vmin;
@@ -584,8 +590,13 @@ footer h3{
         right:10.5vw;
         top:0.7vh;
     }
-
-   
+    .content{
+        display: block;
+        position: relative;
+        padding-top: 5vh;
+        
+         
+    }
 
 }
 @media (min-width: 1000px){
@@ -620,53 +631,17 @@ footer h3{
     }
 
 
-
-    .profile img{
-
-        width: 24vw;
-        height: auto;
-        margin-bottom: 2vmin;
-        align-items: center;
-    }
-
     .GradientCV{
-
-        top: 50vh;
-        width: 100%;
-        height: 5vh;
-        filter: blur(30px);
+        bottom: 50vh;
+        height: 4vh;
+        filter: blur(20px);
         transform: scale(0.7,2);  
     }
-    .GradientWorks{
-        bottom: 0vh;
-        width: 100%;
-        height: 15vh;
-        background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%,rgb(255, 255, 255)50%, rgb(51, 121, 187)100%);
-        filter: blur(10px);
-        transform: scale(1.2,5);
-        
+    .profile img{
+        top: 8vh;
+        width: 50vw;
     }
-    .GradientContact{
-        left:20vw;
-        bottom:30vh;
-        width: 100%;
-        height: 6vh;
-        filter: blur(80px);
-        background: linear-gradient(to right, rgb(118, 204, 222)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-        transform: scale(1,2);  
-      
-    }
-    
-    .GradientContact2{
-        left:50vw;
-        bottom:20vh;
-        width: 30vw;
-        height: 3vh;
-        filter: blur(40px);
-        background: linear-gradient(to bottom, rgb(255, 83, 40)0%, rgb(255, 255, 255)50%,rgba(255, 255, 255, 0)100%);
-        transform: scale(1,2.5);  
-      
-    }
+
 
     .gallery{
         display: flex;
@@ -732,8 +707,136 @@ footer h3{
     .image:focus, .image:active:hover, .overlay {
         opacity: 0;
     }
+    .work{
+        display:flex;
+        position: relative;
+        padding-top: 5vh;
+
+    }
+
+    .content{
+        display: block;
+        position: relative;
+        max-width: 50vw;
+        margin-right: 5vw;
+        margin-left: 40vw;
+        
+
+        
+         
+    }
+    .content h3{
+        
+        padding-bottom: 10vh;
+        margin-left: 3vw;
+        margin-right: 5vw;
+        width: 100%;
+        text-align: start;
+        overflow-wrap: break-word;
+        text-align: justify-all;
+       
+        
+    }
+    .content h6{
+        
+        padding-bottom: 10vh;
+        margin-left: 3vw;
+        margin-right: 5vw;
+        width: 100%;
+        text-align: start;
+        overflow-wrap: break-word;
+        text-align: justify-all;
+        
+    }
+
+    .word{
+        position: fixed;
+        max-width: 30vw;
+        margin-left: 5vw;
+        text-align: justify;
+        
+    
+    }
+ 
+    
+    
+    #media {
+        margin-left: 3vw;
+        width: auto;
+        height: auto;
+        max-width: 70vw;
+        
+        
+    }
+    .work-image {
+        margin-left: 3vw;
+
+ 
+    }
+    .work-image img{
+        padding-bottom: 5vmin;
+    }
+    .more{
+        
+    }
+
+    .work-vis {
+        display: block;
+        position: static;
+        max-width: 50vw;
+        height: auto;
+        padding-top: 5vh;
+    
+        
+    }
+
+    .work-item {
+        display: flex;
+        width: auto;
+        height: auto;
+        max-height: none;
+        max-width: 50vw;
+        padding-top: 5vh;
+        padding-bottom: 0vh;
+    }
+    .work-item:hover{
+        width: 50vw;
+        padding-top: 5vh;
+        padding-bottom: 0vh;
+    }
+    
+    .work-item img {
+        width: 100%;
+        height: auto;
+
+    }
+    .work-item:hover img{
+        width: 50vw;
+    }
+   
+    .work-item .caption{
+        display: none;
+    }
+
+    .work-item:hover .caption{
+        display: flex;
+        position: fixed;
+        bottom: 50vh;
+        left: 5vw;
+        max-width: 30vw;
+        max-height: none;
+     
+        text-align: justify;
+    }
+    
+ 
+    
 
 
+
+
+   
+ 
     
         
      

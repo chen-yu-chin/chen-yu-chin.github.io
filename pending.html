@@ -14,20 +14,23 @@
 
 <body>
 
-        <div id="work" class="work">  
+        <div id="work" class="work"> 
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div> 
             <div id="content" class="content">
-                <div class="word">
-                    <h2 id="title"></h2>
-                    <h5 id="year"></h5>
-                    <h5 id="text"></h5>
-                </div>
+                
                 <div id="work-image" class="work-image"></div>
-                <h3 id="description"></h3>
+    
+                <h3>The work showcases imagination and contemplation about the internet and the future. The thoughts start with reflecting how we, who live in the internet culture of this era, perceive, utilize and consume time. The protagonist of the video is a character who lives in the internet, the core of the content is shaped by the protagonist\'s introspection and whispered musings, coupled with the use of symbols that resonate with the viewers to depict a snapshot of the times.</h3>
                 <div id="media" class="media"></div>
+            </div>
+            
                 <div class="more">
                     <a href="works.html">↩︎</a>
                 </div>
-            </div>
             <footer>
                 <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
@@ -48,7 +51,7 @@
     media: ['https://www.youtube.com/embed/0sL63esVgk8?si=F9962d62n-gdFCpY?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=0'],
     w: '100%',
     h: '50vmin',
-    description: 'The work showcases imagination and contemplation about the internet and the future. The thoughts start with reflecting how we, who live in the internet culture of this era, perceive, utilize and consume time. The protagonist of the video is a character who lives in the internet, the core of the content is shaped by the protagonist\'s introspection and whispered musings, coupled with the use of symbols that resonate with the viewers to depict a snapshot of the times.'
+    description: ''
 }
 
 
@@ -71,10 +74,10 @@
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
-            Title.innerText = title;
-            Description.innerText = description;
-            Year.innerText = year;
-            Text.innerText = text;
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 

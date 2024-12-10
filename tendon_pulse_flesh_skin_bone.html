@@ -16,20 +16,29 @@
 
 
         <div id="work" class="work">    
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div>
             <div id="content" class="content">
-                <div class="word">
-                    <h2 id="title"></h2>
-                    <h5 id="year"></h5>
-                    <h5 id="text"></h5>
-                </div>
+
                 <div id="work-image" class="work-image"></div>
-                <h3 id="description"></h3>
+               
+                <h3>The conceptualization of “TENDON/PULSE/FLESH/SKIN/BONE” is based on the Ambisonics system and explores an alternative form of composition and sonic expression. The project starts from the senses of bodily perception and spatial awareness, aiming to integrate the sound field and the body using wearable devices. 
+                    <br><br>
+                    Through common and abstract characteristics of auditory and tactile realms, associations between time and space are established and the field is formed via the senses. Further revealing the dialogue and reciprocal relationship between the body, space, environment, as well as the microcosm and macrocosm of the universe. 
+                    <br><br>
+                    The main research and experimental directions of this project are how sound can be used to push, pull, extend, cut, compress, and disturb space, while incorporating the body as part of the sound space.
+                </h3>
                 <div id="media" class="media"></div>
                 <h6>“TENDON / PULSE / FLESH / SKIN / BONE” was developed in C-LAB Taiwan Sound Lab as part of the artist-in-residency program “CREATORS Sound-Off” <br><br>Photo Credit: Lô Bōo-Him</h6>
+                
+            </div>
+            
                 <div class="more">
                     <a href="works.html">↩︎ </a>
-                 </div>
-            </div>
+                </div>
             <footer>
                 <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
@@ -49,7 +58,7 @@
                 media: ['https://www.youtube.com/embed/dhYO70_Yexg?si=j0pZSZnILYnTt25p?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=0'],
                 w: '100%',
                 h: '50vmin',
-                description: 'The conceptualization of “TENDON/PULSE/FLESH/SKIN/BONE” is based on the Ambisonics system and explores an alternative form of composition and sonic expression. The project starts from the senses of bodily perception and spatial awareness, aiming to integrate the sound field and the body using wearable devices. Through common and abstract characteristics of auditory and tactile realms, associations between time and space are established and the field is formed via the senses. Further revealing the dialogue and reciprocal relationship between the body, space, environment, as well as the microcosm and macrocosm of the universe. The main research and experimental directions of this project are how sound can be used to push, pull, extend, cut, compress, and disturb space, while incorporating the body as part of the sound space.'
+                description: ''
             }
         ];
 
@@ -67,10 +76,10 @@
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
-            Title.innerText = title;
-            Description.innerText = description;
-            Year.innerText = year;
-            Text.innerText = text;
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 
