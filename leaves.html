@@ -28,7 +28,7 @@
                
             </div>
             <div class="more">
-                <a href="interactive.html">↩︎</a>
+                <a href="interactive.html" id="back">↩︎</a>
              </div>
             <footer>
                 <br><br>
@@ -40,11 +40,26 @@
 
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
+    
         const images = [
         {
     title: 'Leave(s)',
     year: 'Interactive Installation',
-    text: 'Python, Max/MSP ',
+    text: 'Machine Learning, Max/MSP ',
     imagePaths: ['img/le.png', 'img/le2.png'],
     w: '0vw',
     h: '0vmin',
@@ -78,6 +93,8 @@
         }
 
         openWork();
+
+        
     </script>
 </body>
 

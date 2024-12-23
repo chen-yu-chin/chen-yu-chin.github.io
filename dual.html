@@ -28,7 +28,7 @@
                 <h6>Installation Exhibited at Project Seek (Taipei) and Museum of Contemporary Art, Taipei<br><br><br>Director: Lin Pei-Yao<br>Performers: Peng Wei, Chou Ai-Hsuan<br>Cinematography: Ko Lai-He<br>Art Design: Lin Pei-Yao<br>Shooting Assistant: Chu Yun-Rung<br>On-Site and Post-Production Sound Recording: Justin Lin<br>Video Editing & Post-Production: Lin Pei-Yao<br>Sound Design: Chen Yu-Chin<br>Audio-Visual Software & Hardware Integration: Chen Yu-Chin<br>Rehearsal Footage: Chu Yun-Rung</h6>
             </div>
             <div class="more">
-                <a href="sound.html">↩︎</a>
+                <a href="sound.html" id="back">↩︎</a>
              </div>
             <footer>
                 <br><br>
@@ -40,6 +40,21 @@
     
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
+
         const images = [
         {
             title: 'Dual-Channel II',

@@ -82,9 +82,26 @@
 
     </div>
     <div class="more">
-        <a href="seamonster.html">↩︎ </a>
+        <a href="seamonster.html" id="back">↩︎ </a>
      </div>
 
+     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const back = document.getElementById("back");
+            const Href = back.getAttribute("href");
+            const previousPage = document.referrer;
+    
+            if (previousPage && previousPage.includes(Href)) {
+                back.addEventListener("click", (e) => {
+                    e.preventDefault(); 
+                    history.back(); 
+                });
+            } else {
+          
+            }
+        });
+        
+    </script>
 </body>
 <footer>
     <br><br>

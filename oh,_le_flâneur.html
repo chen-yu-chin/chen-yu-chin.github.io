@@ -29,7 +29,7 @@
                 
             </div>
             <div class="more">
-                <a href="sound.html">↩︎</a>
+                <a href="sound.html" id="back">↩︎</a>
              </div>
             <footer>
                 <br><br>
@@ -40,6 +40,20 @@
         </div>   
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
         const images = [
         {
             title: 'Oh, le flâneur',

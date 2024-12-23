@@ -34,7 +34,7 @@
             </div>
            
                 <div class="more">
-                    <a href="works.html">↩︎ </a>
+                    <a href="seamonster.html" id="back">↩︎ </a>
                  </div>
             <footer>
                 <br><br>
@@ -46,6 +46,20 @@
 
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
         const images = [
             {
                 title: 'The Wetness of Slow Devour',

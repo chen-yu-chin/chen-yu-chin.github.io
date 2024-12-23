@@ -15,7 +15,9 @@
 <body>
     <div class="navigation">             
         <h3>Yuchin&nbsp;Chen&nbsp;&nbsp;&nbsp;&nbsp;陳 瑜 璟</h3>
-        <p>chen.yu.chin@icloud.com<br>+49015229041016</p>
+        <p>chen.yu.chin@icloud.com<br>(+49)015229041016</p>
+        <p><br></p>
+        <img src="img/cv.png" alt="" width="50%" height="auto" style="border: 0px solid black;">
     </div>
     
     <div class="container">
@@ -23,6 +25,11 @@
     <p><br></p>
         
         <p><br></p>
+
+    
+        <p>Yuchin Chen is a Taiwanese multimedia artist, currently based in Berlin. Yuchin's works deal with the senses of harmony/disharmony and association/disassociation between the time, space and self, often from the perspective of digital mediation, signal translation, and listening to explore new forms of understanding and perceiving the environment around us. </p>     
+        
+        <br><br>
         
         <h2>EDUCATION</h2>
         <p>2023 - &nbsp;&nbsp;MA Sound Studies and Sonic Arts, Universität der Künste Berlin<br>
@@ -31,16 +38,6 @@
         <p><br></p>
         <br>
     
-        <h2>PROFESSIONAL EXPERIENCE</h2>
-        <p>2022 - 2023 &nbsp;&nbsp;Zone Sound Creative – Intern<br><br>Wrote sonic art related articles, teaching assistant of sonic art workshops,
-            assisted with projects (sound design, visual design, interactive installation programming).
-            <br><br>
-        2020 &nbsp;&nbsp;C-LAB Taiwan Sound Lab – Intern<br><br>Assisted with projects, program planning, photo/video documentation, social media marketing.
-        <br><br>
-        2020 - 2021 &nbsp;&nbsp;White Crane Films - Assistant to Director<br><br>Assisted on set, assisted with script writing, office administration.
-    </p>
-        <p><br></p>
-        <br>
         <h2>ARTIST-IN-RESIDENCE</h2>
         <p>2024 &nbsp;&nbsp;ZKM | Hertzlab, Karlsruhe<br> 
         2023 &nbsp;&nbsp;C-LAB Taiwan Sound Lab, Taipei </p>
@@ -74,14 +71,103 @@
             2024 &nbsp;&nbsp;《Dual-Channel II》by Pei-Yao Lin - Exhibited at Project Seek and MoCA Taipei<br>
             2022 &nbsp;&nbsp;《oh, le flâneur》by Lilac Red - Exhibited at Da Dun Fine Arts Exhibition, Taichung<br>
                 </p>
+                <p><br></p>
+                <br>
+
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <p>2022 - 2023 &nbsp;&nbsp;Zone Sound Creative – Intern<br><br>Wrote sonic art related articles, teaching assistant of sonic art workshops,
+            assisted with projects (sound design, visual design, interactive installation programming).
+            <br><br>
+        2020 &nbsp;&nbsp;C-LAB Taiwan Sound Lab – Intern<br><br>Assisted with projects, program planning, photo/video documentation, social media marketing.
+        <br><br>
+        2020 - 2021 &nbsp;&nbsp;White Crane Films - Director Assistant<br><br>Assisted on set, assisted with script writing, funding proposal, office administration.
+    </p>
+        <p><br></p>
+        <br>
+        <h2>SKILLSETS</h2>
+        <p>Graphic Design (Illustrator, Photoshop)
+        <br>3D Modeling / Animation (Blender, C4D)
+        <br>Photography (Lightroom)
+        <br>Video Editing (Premiere, Final Cut)
+        <br>Sound Design (Ableton Live, Logic Pro)
+        <br>Sound Recording (Studio Recording, Film Recording, Field Recording) 
+        <br>Spatial Audio (Multi-Channel, Ambisonics)
+        <br>Interactive Programming (Javascript, Python, Unity, Touchdesigner, Arduino, Max/MSP)
+    
+
+    
+    </p>
+        <p><br></p>
+        <br>
+
             <p><br><br><br><br><br></p>
 
    
 
     </div>
     <div class="more">
-        <a href="i.html">↩︎ </a>
+        <a href="i.html" id="back">↩︎ </a>
      </div>
+
+     <script>
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
+    
+</script>
+        function createRandomBlocks() {
+        const blockCount = 3; 
+        for (let i = 0; i < blockCount; i++) {
+            const block = document.createElement('div');
+            block.className = 'GradientContact';
+            
+            const color1 = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            const color2 = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            
+            const left = `${Math.random() * 100 - 10}vw`;
+            const top = `${Math.random() * 120+80}vh`;
+        
+            block.style.left = left;
+            block.style.top = top;
+            block.style.background = `linear-gradient(to bottom, ${color1} 0%, ${color2} 50%, rgba(255, 255, 255, 0) 100%)`;
+            block.style.width = '20vw';
+            block.style.height = '10vh';
+            document.body.appendChild(block);
+        }
+        for (let i = 0; i < blockCount; i++) {
+            const block = document.createElement('div');
+            block.className = 'GradientContact2'; 
+            
+            const left = `${Math.random() * 100 -10}vw`;
+            const top = `${Math.random() * 120+80}vh`;
+            
+            block.style.left = left;
+            block.style.top = top;
+            block.style.width = '20vw';
+            block.style.height = '10vh';
+         
+            document.body.appendChild(block);
+        }
+    }
+
+    createRandomBlocks();
+
+            
+        </script>
+        
 </body>
 <footer>
     <br><br>

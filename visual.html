@@ -24,7 +24,7 @@
         </div>
         <div class="more">
             <br><br>
-            <a href="i.html">↩︎</a>
+            <a href="i.html" id="back">↩︎</a>
          </div>
         <footer>
             <br><br>
@@ -35,6 +35,20 @@
     
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
         const works = [
             { imagePath: 'visual/tpfsb.png', caption: '“Tendon / Pulse / Flesh / Skin / Bone” Banner Design' },
             { imagePath: 'visual/lmt.png', caption: '“Landscape, Memory and Time” Poster Design' },

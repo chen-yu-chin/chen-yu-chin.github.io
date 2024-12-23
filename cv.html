@@ -68,10 +68,27 @@
     </div>
     
     <div class="more">
-        <a href="index2.html">↩︎ </a>
+        <a href="index2.html" id="back">↩︎ </a>
      </div>
 
      <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
+    
+</script>
         function createRandomBlocks() {
         const blockCount = 10; 
         for (let i = 0; i < blockCount; i++) {
