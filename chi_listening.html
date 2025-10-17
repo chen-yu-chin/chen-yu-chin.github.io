@@ -22,34 +22,38 @@
 </head>
 
 <body>
-        <div id="work" class="work">
+
+  
+        <div id="work" class="work">  
             <div class="word">
                 <h2 id="title"></h2>
                 <h5 id="year"></h5>
                 <h5 id="text"></h5>
-            </div>
+            </div> 
+                  
             <div id="content" class="content">
                 
+
                 <div id="work-image" class="work-image"></div>
-                <div id="media" class="media"></div>
-                <h3 id="description"></h3>
+          
+     
                 
             </div>
-            <div class="more">
-                <a href="interactive.html" id="back">↩︎</a>
-             </div>
+           
+                <div class="more">
+                    <a href="works.html" id="back">↩︎</a>
+                 </div>
             <footer>
                 <br><br>
                 <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
                 <h3>2 0 2 5</h3>
                 <br>
             </footer>
-        </div>
-
+        </div>   
+  
 
     <script>
-
-document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", () => {
         const back = document.getElementById("back");
         const Href = back.getAttribute("href");
         const previousPage = document.referrer;
@@ -63,22 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
       
         }
     });
-    
-
         const images = [
         {
-    title: 'CONFESSION',
-    year: 'Sound Visualization',
-    text: 'Python, Touchdesigner',
-    imagePaths: ['img/11.png', 'img/12.png', 'img/confe.png'],
-    w: '0vw',
-    h: '0vmin',
-    description: 'Confession is a sound visualization serie that transfers peoples anger, guilt, sadness and memories into unque visuals, as a secret language.'
+            path: '',
+            title: '',
+            year: '',
+            text: '',
+            imagePaths: ['img/C.png','img/C2.png'],
+            media: ['https://www.youtube.com/embed/k-udv5gne6k?si=RhQcUlhDQWjWmodk?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=1'],
+            w: '100%',
+            h: '50vmin',
+            description: ''
 }
-
-
-
-
 
 
         ];
@@ -97,16 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
             
-            Title.innerText = title;
-            Description.innerText = description;
-            Year.innerText = year;
-            Text.innerText = text;
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 
         openWork();
     </script>
-
 </body>
 
 </html>
