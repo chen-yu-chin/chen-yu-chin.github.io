@@ -39,6 +39,17 @@ body {
     padding-top: 8vmin;
   
 }
+.navigationW h7{
+    text-align: left;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;  
+    
+  }
+.navigationW h7:hover {
+    cursor: pointer;
+    background-color: rgba(111, 111, 111, 0.1);
+    color: #5845ff;
+  }
 .navigationW h3{
     text-align: left;
     padding-top: 1vmin;
@@ -334,6 +345,7 @@ h6{
    
 
 }
+
 
 p{
     font-family: "IBM Plex Mono", monospace;

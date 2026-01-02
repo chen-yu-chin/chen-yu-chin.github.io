@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9JPN5TDE0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JPN5TDE0M');
+</script>
+</head>
+
+<body>
+
+  
+        <div id="work" class="work">  
+            <div class="word">
+                <h2 id="title"></h2>
+                <h5 id="year"></h5>
+                <h5 id="text"></h5>
+            </div> 
+                  
+            <div id="content" class="content">
+                
+    <h3>“Notes on floating” is an experimental writing project that unfolds around the meanings,
+        bodily experiences, and metaphors of “floating”. Beginning from everyday observations,
+        personal experiences, and island mythologies, “floating” here is not simply suspension
+or weightlessness, but a state of in-betweenness and openness. Through the rhythmic
+compositions of illustrations, images, and text, the project seeks to capture the resonance
+and fragmentation of language, depicting “floating” as a transient condition between
+rooting and uprooting, soil and water, myth and reality.</h3>
+<h3>excerpt:</h3>
+                <div id="work-image" class="work-image"></div>
+          
+                
+                
+            </div>
+           
+                <div class="more">
+                    <a href="works.html" id="back">↩︎</a>
+                 </div>
+            <footer>
+                <br><br>
+                <h3> © C h e n &nbsp;Y u &nbsp;C h i n </h3>
+                <h3>2 0 2 5</h3>
+                <br>
+            </footer>
+        </div>   
+  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const back = document.getElementById("back");
+        const Href = back.getAttribute("href");
+        const previousPage = document.referrer;
+
+        if (previousPage && previousPage.includes(Href)) {
+            back.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                history.back(); 
+            });
+        } else {
+      
+        }
+    });
+        const images = [
+        {
+            path: '',
+            title: 'Notes on Floating',
+            year: '2025',
+            text: 'Text',
+            imagePaths: ['img/n1.png','img/n2.png','img/n3.png','img/n4.png'],
+            media: [],
+            w: '100%',
+            h: '50vmin',
+            description: ''
+}
+
+
+        ];
+
+        function openWork() {
+            const work = document.getElementById('work');
+            const workImage = document.getElementById('work-image');
+            const Title = document.getElementById('title');
+            const Year = document.getElementById('year');
+            const Description = document.getElementById('description');
+            const Text = document.getElementById('text');
+            const Media = document.getElementById('media');
+            
+            const { title, description, year, text, imagePaths, media, w, h } = images[0];
+
+            work.style.display = 'block';
+            workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
+            
+            if (title) Title.innerText = title;
+            if (year) Year.innerText = year;
+            if (description) Description.innerText = description;
+            if (text) Text.innerText = text;
+            Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
+        }
+
+        openWork();
+    </script>
+</body>
+
+</html>
