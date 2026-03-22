@@ -46,6 +46,7 @@ being heard —is what makes it alive.” - ChatGPT
 Yet, what happens when this uniqueness is adapted and projected by many as the
 preferred ethical guide-line?</h3>
                 <div id="media" class="media"></div>
+                <div id="media2" class="media2"></div>
             </div>
             
                 <div class="more">
@@ -83,8 +84,10 @@ preferred ethical guide-line?</h3>
     text: 'Performance (with Anna Clementi & Jevgeniy Turovskiy)',
     imagePaths: ['img/pn1.png', 'img/pn2.png', 'img/pn3.png','img/pn4.png'],
     media: ['https://www.youtube.com/embed/MbqEtLt3HMQ?si=F9962d62n-gdFCpY?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&controls=1'],
+    media2: ['https://w.soundcloud.com/player/?url=https%253A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2281102742%3Fsecret_token%3Ds-tHaENWWWxXw&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false'],
     w: '100%',
     h: '50vmin',
+    h2: 'auto',
     description: ''
 }
 
@@ -102,8 +105,9 @@ preferred ethical guide-line?</h3>
             const Description = document.getElementById('description');
             const Text = document.getElementById('text');
             const Media = document.getElementById('media');
+            const Media2 = document.getElementById('media2');
             
-            const { title, description, year, text, imagePaths, media, w, h } = images[0];
+            const { title, description, year, text, imagePaths, media, media2, w, h, h2 } = images[0];
 
             work.style.display = 'block';
             workImage.innerHTML = imagePaths.map(path => `<img src="${path}" style="width: 100%;">`).join('');
@@ -113,6 +117,7 @@ preferred ethical guide-line?</h3>
             if (description) Description.innerText = description;
             if (text) Text.innerText = text;
             Media.innerHTML = media.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h};" frameborder="0" allowfullscreen></iframe>`).join('');
+            Media2.innerHTML = media2.map(src => `<iframe src="${src}" style="width: ${w}; height: ${h2};" frameborder="0" allowfullscreen></iframe>`).join('');
         }
 
         openWork();
