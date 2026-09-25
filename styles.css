@@ -18,7 +18,7 @@ body {
 }
   
 .navigation {
-    text-align: center;
+    text-align: left;
     padding-top: 8vmin;
 }
 .navigation a {
@@ -325,6 +325,14 @@ h3 {
     color: #000000;
     text-align: center;
 }
+h3b {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgb(168, 230, 255);
+    text-align: left;
+}
+
 h4 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
@@ -352,6 +360,15 @@ p{
     font-weight: 400;
     font-size: 10px;
     color: #000000;
+   
+
+}
+pb{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 10px;
+    color: rgb(168, 230, 255);
+    text-align: left;
    
 
 }
@@ -576,6 +593,11 @@ footer h3{
         font-weight: 400;
         font-size: 18px;
     }
+    h3b {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgb(168, 230, 255);
+    }
     
     h4 {
         font-weight: 400;
@@ -589,6 +611,11 @@ footer h3{
     p{
         font-weight: 400;
         font-size: 15px;
+    }
+    pb{
+        font-weight: 400;
+        font-size: 15px;
+        color: rgb(168, 230, 255);
     }
 
     .w1{ 
@@ -665,6 +692,11 @@ footer h3{
         font-weight: 400;
         font-size: 18px;
     }
+    h3b {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgb(168, 230, 255);
+    }
     
     h4 {
         font-weight: 400;
@@ -674,10 +706,16 @@ footer h3{
         font-weight: 300;
         font-size: 15px;
     }
+
     
     p{
         font-weight: 400;
         font-size: 15px;
+    }
+    pb{
+        font-weight: 400;
+        font-size: 15px;
+        color: rgb(168, 230, 255);
     }
 
 
